@@ -79,9 +79,9 @@ Node.js Runtime
 │   └── Microtask Queue
 │
 └── libuv
-    ├── Event Loop
-    ├── Thread Pool
-    └── Async I/O
+      ├── Event Loop
+      ├── Thread Pool
+      └── Macrotask / Callback Queue (timers, I/O, setImmediate)
 ```
 
 ### 13. What is the main purpose of the Node.js Runtime?
