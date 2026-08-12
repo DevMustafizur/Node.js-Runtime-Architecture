@@ -1,4 +1,6 @@
-# Node.js Runtime — 
+README-এর জন্য তোমার content-টা clean ও consistent করে এভাবে রাখতে পারো:
+
+# Node.js Runtime
 
 ### 1. What is the Node.js Runtime?
 
@@ -8,11 +10,17 @@
 
 **Answer:** The main components are:
 
-* V8 JavaScript Engine
-* Node.js APIs
-* libuv
-* Event Loop and Queues
-* C++ Core and Bindings
+```text
+Node.js Runtime
+│
+├── V8 JavaScript Engine
+├── Node.js APIs
+├── Global / process
+├── C++ Core / Bindings
+├── libuv
+├── Event Loop
+└── Task Queues
+```
 
 ### 3. What is the role of V8 in Node.js?
 
@@ -22,7 +30,7 @@
 
 **Answer:** Node.js APIs provide system-level features such as file handling, networking, streams, cryptography, and process management.
 
-Examples: `fs`, `http`, `path`, `crypto`, `stream`, and `process`.
+**Examples:** `fs`, `http`, `path`, `crypto`, `stream`, and `process`.
 
 ### 5. What is libuv?
 
@@ -30,13 +38,13 @@ Examples: `fs`, `http`, `path`, `crypto`, `stream`, and `process`.
 
 ### 6. What is the Event Loop?
 
-**Answer:** The Event Loop manages and schedules asynchronous operations and their callbacks.
+**Answer:** The Event Loop manages and schedules callbacks from asynchronous operations.
 
 ### 7. What are Queues in Node.js?
 
-**Answer:** Queues hold callbacks and tasks that are waiting to be processed by the runtime.
+**Answer:** Queues hold callbacks and tasks waiting to be processed by the runtime.
 
-Examples include the Microtask Queue and `process.nextTick` Queue.
+**Examples:** Microtask Queue, `process.nextTick` Queue, and callback queues.
 
 ### 8. What is the role of C++ Core and Bindings?
 
@@ -61,11 +69,19 @@ Examples include the Microtask Queue and `process.nextTick` Queue.
 ```text
 Node.js Runtime
 │
+├── Node.js APIs + Global / process
+│
+├── C++ Core / Bindings
+│
 ├── V8 JavaScript Engine
-├── Node.js APIs
-├── libuv
-├── Event Loop + Queues
-└── C++ Core / Bindings
+│   ├── ECMAScript Features
+│   ├── JavaScript Execution
+│   └── Microtask Queue
+│
+└── libuv
+    ├── Event Loop
+    ├── Thread Pool
+    └── Async I/O
 ```
 
 ### 13. What is the main purpose of the Node.js Runtime?
