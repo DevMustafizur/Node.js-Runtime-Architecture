@@ -76,12 +76,14 @@ Node.js Runtime
 ├── V8 JavaScript Engine
 │   ├── ECMAScript Features
 │   ├── JavaScript Execution
-│   └── Microtask Queue
 │
 └── libuv
       ├── Event Loop
       ├── Thread Pool
-      └── Macrotask / Callback Queue (timers, I/O, setImmediate)
+└── Task / Callback Queues
+    ├── process.nextTick Queue
+    ├── Microtask Queue
+    └── Event Loop Callback Queues
 ```
 
 ### 13. What is the main purpose of the Node.js Runtime?
